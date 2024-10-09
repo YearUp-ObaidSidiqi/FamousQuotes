@@ -15,6 +15,7 @@ public class FamousQuotes {
         quotes[7] = "Start where you are. Use what you have. Do what you can.";
         quotes[8] = "Act as if what you do makes a difference. It does.";
         quotes[9] = "The harder you work for something, the greater you'll feel when you achieve it.";
+
         while (true) {
             try {
                 byte selectedNumber = Utilities.PromptForByte("Select Number From 1 to 10:  ");
@@ -23,13 +24,15 @@ public class FamousQuotes {
                 System.out.println("   ------   "+quotes[selectedNumber]+"   ------   \n");
             } catch (Exception e) {
                 System.out.println("Invalid Selection: Please Select from 1 to 10.  \n");
+                System.out.println(e.getMessage());
             }
             System.out.println("Do you want to See another Quote?  ");
             String commond = Utilities.PromptForString("If Yes Please Enter [A] & If You Want to Exit Enter [Any-Key]:  ");
-            if (commond.equalsIgnoreCase("A")){
-
-            }else break;
-
+            if (!commond.equalsIgnoreCase("A")){
+                break;
+            }
+            // Work on asking user if they want a random quote
         }
+
     }
 }

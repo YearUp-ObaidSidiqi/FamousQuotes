@@ -8,15 +8,10 @@ public class Utilities {
 
     public static String PromptForString(String prompt) {
         System.out.print(prompt);
-        String userInput = scanner.nextLine();
+        String userInput = scanner.nextLine().trim();
         return userInput;
     }
-    public static short PromptForShort(String prompt) {
-        System.out.print(prompt);
-        short userinput = scanner.nextShort();
-        scanner.nextLine();
-        return userinput;
-    }
+
 
     public static byte PromptForByte(String prompt) {
         System.out.print(prompt);
@@ -25,21 +20,6 @@ public class Utilities {
         return userinput;
     }
 
-    public static String PromptForString() {
-        return scanner.nextLine();
-    }
 
-    public static boolean PromptForYesNo(String prompt) {
-        System.out.print(prompt + " ( Y for Yes, N for No ) ?");
-        String userinput = scanner.nextLine();
-
-        return
-                (
-                        userinput.equalsIgnoreCase("Y")
-                                ||
-                                userinput.equalsIgnoreCase("YES")
-                );
-
-    }
 
 }
